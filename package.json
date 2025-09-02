@@ -1,7 +1,7 @@
 {
   "name": "@motion-presets/core",
   "version": "0.1.0",
-  "description": "🎭 Beautiful React animations made simple - One-line animation presets built on Framer Motion",
+  "description": "🎭 Framer Motion Templates & Presets - 50+ ready-to-use React animation templates, Framer Motion examples, and presets for modals, page transitions, and UI components",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
@@ -20,7 +20,7 @@
   ],
   "sideEffects": false,
   "license": "MIT",
-  "homepage": "https://motion-presets.dev",
+  "homepage": "https://github.com/jyogesh17/motion-presets#readme",
   "repository": {
     "type": "git",
     "url": "https://github.com/jyogesh17/motion-presets.git"
@@ -35,14 +35,21 @@
   },
   "funding": {
     "type": "individual",
-    "url": "https://motion-presets.dev/pricing"
+    "url": "https://github.com/sponsors/jyogesh17"
   },
   "keywords": [
+    "framer-motion",
+    "framer-motion-templates",
+    "framer-motion-presets",
+    "framer-motion-examples",
+    "animation-templates",
+    "react-animation-presets",
+    "motion-templates",
     "react",
     "animation",
-    "framer-motion",
     "motion",
     "presets",
+    "templates",
     "components",
     "ui",
     "transitions",
@@ -52,7 +59,10 @@
     "entrance",
     "effects",
     "spring",
-    "physics"
+    "physics",
+    "modal",
+    "carousel",
+    "page-transitions"
   ],
   "scripts": {
     "dev": "tsup --watch",

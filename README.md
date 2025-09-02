@@ -1,11 +1,11 @@
-# 🎭 Motion Presets
+# 🎭 Framer Motion Templates & Presets
 
 [![npm version](https://badge.fury.io/js/%40motion-presets%2Fcore.svg)](https://www.npmjs.com/package/@motion-presets/core)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![TypeScript](https://img.shields.io/badge/TypeScript-Ready-blue.svg)](https://www.typescriptlang.org/)
 [![Next.js](https://img.shields.io/badge/Next.js-Compatible-black.svg)](https://nextjs.org/)
 
-**Beautiful React animations made simple.** One-line animation presets built on [Framer Motion](https://www.framer.com/motion/).
+**50+ Ready-to-use Framer Motion Templates & Examples.** Transform complex Framer Motion code into simple one-line components. Perfect for modals, page transitions, and UI animations.
 
 Transform this complex Framer Motion code:
 ```jsx
@@ -331,7 +331,152 @@ import { fadeIn } from '@motion-presets/core'
 </form>
 ```
 
+## 🎨 Framer Motion Templates Gallery
+
+### Modal with Framer Motion
+Create beautiful animated modals with zero configuration:
+
+```jsx
+import { Reveal } from '@motion-presets/core'
+
+function Modal({ isOpen, onClose, children }) {
+  return (
+    <AnimatePresence>
+      {isOpen && (
+        <>
+          {/* Backdrop */}
+          <Reveal preset="fadeIn">
+            <div className="modal-backdrop" onClick={onClose} />
+          </Reveal>
+          
+          {/* Modal Content */}
+          <Reveal preset="zoomIn" delay={0.1}>
+            <div className="modal-content">
+              {children}
+            </div>
+          </Reveal>
+        </>
+      )}
+    </AnimatePresence>
+  )
+}
+```
+
+### Page Transition Framer Motion Snippets
+Smooth page transitions for Next.js:
+
+```jsx
+import { PageTransition } from '@motion-presets/core'
+
+// In your _app.js or layout
+function MyApp({ Component, pageProps, router }) {
+  return (
+    <PageTransition key={router.pathname} preset="slideInRight">
+      <Component {...pageProps} />
+    </PageTransition>
+  )
+}
+
+// Individual page transitions
+<Reveal preset="fadeInUp" delay={0.2}>
+  <h1>Welcome to the new page!</h1>
+</Reveal>
+```
+
+### Carousel with Framer Motion
+Interactive carousel with gesture support:
+
+```jsx
+import { Stagger, MultiAnimation } from '@motion-presets/core'
+
+function ImageCarousel({ images }) {
+  return (
+    <div className="carousel">
+      <Stagger preset="slideInLeft" staggerChildren={0.1}>
+        {images.map((image, index) => (
+          <MultiAnimation
+            key={index}
+            animations={[
+              { preset: 'fadeIn', delay: 0 },
+              { preset: 'zoomIn', delay: 0.2 }
+            ]}
+          >
+            <img src={image.src} alt={image.alt} />
+          </MultiAnimation>
+        ))}
+      </Stagger>
+    </div>
+  )
+}
+```
+
 ## 🐛 Troubleshooting
+
+### Common Framer Motion Problems Solved
+
+**Framer Motion Drag Constraints Not Working**
+```jsx
+// ❌ Common mistake - incorrect constraint setup
+<motion.div drag dragConstraints={{ left: 0, right: 0 }}>
+  Not working properly
+</motion.div>
+
+// ✅ Correct approach with Motion Presets
+<Reveal preset="draggable" dragConstraints={{ left: -100, right: 100 }}>
+  <div>Drag me within bounds!</div>
+</Reveal>
+
+// ✅ Alternative - use ref for dynamic constraints
+const constraintsRef = useRef(null)
+<div ref={constraintsRef}>
+  <Reveal preset="draggable" dragConstraints={constraintsRef}>
+    <div>Drag within parent!</div>
+  </Reveal>
+</div>
+```
+
+**Framer Motion Examples Not Working in Next.js**
+```jsx
+// ❌ Server-side rendering issues
+import { motion } from 'framer-motion' // Causes hydration errors
+
+// ✅ Use Motion Presets for SSR compatibility
+'use client'
+import { Reveal } from '@motion-presets/core'
+
+export default function Page() {
+  return (
+    <Reveal preset="fadeIn">
+      <div>Works perfectly with Next.js!</div>
+    </Reveal>
+  )
+}
+```
+
+**Page Transition Framer Motion Snippet Issues**
+```jsx
+// ❌ Common page transition problems
+<AnimatePresence>
+  <Component key={router.pathname} />
+</AnimatePresence>
+
+// ✅ Working page transitions with Motion Presets
+import { PageTransition } from '@motion-presets/core'
+
+function MyApp({ Component, pageProps, router }) {
+  return (
+    <AnimatePresence mode="wait">
+      <PageTransition 
+        key={router.pathname} 
+        preset="slideInRight"
+        exitPreset="slideOutLeft"
+      >
+        <Component {...pageProps} />
+      </PageTransition>
+    </AnimatePresence>
+  )
+}
+```
 
 ### Common Issues
 
@@ -358,6 +503,28 @@ import { Reveal } from '@motion-presets/core'
 </Reveal>
 ```
 
+**Modal with Framer Motion Not Closing Properly**
+```jsx
+// ✅ Proper modal animation with cleanup
+import { AnimatePresence } from 'framer-motion'
+
+function App() {
+  const [isOpen, setIsOpen] = useState(false)
+  
+  return (
+    <AnimatePresence>
+      {isOpen && (
+        <Reveal preset="fadeIn" onAnimationComplete={() => setIsOpen(false)}>
+          <Modal onClose={() => setIsOpen(false)}>
+            Modal content
+          </Modal>
+        </Reveal>
+      )}
+    </AnimatePresence>
+  )
+}
+```
+
 ## 🤝 Contributing
 
 We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details.
@@ -368,8 +535,6 @@ MIT License - see [LICENSE](LICENSE) file for details.
 
 ## 🔗 Links
 
-- [Documentation](https://motion-presets.dev)
-- [Interactive Playground](https://motion-presets.dev/playground)
 - [GitHub Repository](https://github.com/jyogesh17/motion-presets)
 - [NPM Package](https://www.npmjs.com/package/@motion-presets/core)
 - [Issues & Bugs](https://github.com/jyogesh17/motion-presets/issues)
