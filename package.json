@@ -1,5 +1,5 @@
 {
-  "name": "@motion-presets/core",
+  "name": "motion-presets",
   "version": "0.1.0",
   "description": "🎭 Framer Motion Templates & Presets - 50+ ready-to-use React animation templates, Framer Motion examples, and presets for modals, page transitions, and UI components",
   "main": "./dist/index.js",

@@ -1,6 +1,6 @@
 # 🎭 Framer Motion Templates & Presets
 
-[![npm version](https://badge.fury.io/js/%40motion-presets%2Fcore.svg)](https://www.npmjs.com/package/@motion-presets/core)
+[![npm version](https://badge.fury.io/js/motion-presets.svg)](https://www.npmjs.com/package/motion-presets)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![TypeScript](https://img.shields.io/badge/TypeScript-Ready-blue.svg)](https://www.typescriptlang.org/)
 [![Next.js](https://img.shields.io/badge/Next.js-Compatible-black.svg)](https://nextjs.org/)
@@ -40,15 +40,15 @@ Into this simple one-liner:
 ## 📦 Installation
 
 ```bash
-npm install @motion-presets/core framer-motion
+npm install motion-presets framer-motion
 ```
 
 ```bash
-yarn add @motion-presets/core framer-motion
+yarn add motion-presets framer-motion
 ```
 
 ```bash
-pnpm add @motion-presets/core framer-motion
+pnpm add motion-presets framer-motion
 ```
 
 > **Note:** `framer-motion` is a peer dependency and must be installed separately.
@@ -58,7 +58,7 @@ pnpm add @motion-presets/core framer-motion
 ### Basic Usage
 
 ```jsx
-import { Reveal } from '@motion-presets/core'
+import { Reveal } from 'motion-presets'
 
 function App() {
   return (
@@ -84,7 +84,7 @@ function App() {
 ```jsx
 'use client'
 
-import { Reveal, Stagger } from '@motion-presets/core'
+import { Reveal, Stagger } from 'motion-presets'
 
 export default function Page() {
   return (
@@ -180,7 +180,7 @@ Animate text character by character or word by word.
 ### Custom Animations
 
 ```jsx
-import { Reveal } from '@motion-presets/core'
+import { Reveal } from 'motion-presets'
 
 <Reveal 
   preset="fadeIn"
@@ -197,7 +197,7 @@ import { Reveal } from '@motion-presets/core'
 ### Combining Multiple Presets
 
 ```jsx
-import { MultiAnimation } from '@motion-presets/core'
+import { MultiAnimation } from 'motion-presets'
 
 <MultiAnimation
   animations={[
@@ -213,7 +213,7 @@ import { MultiAnimation } from '@motion-presets/core'
 ### Using Preset Functions
 
 ```jsx
-import { springBounce, fadeInUp } from '@motion-presets/core'
+import { springBounce, fadeInUp } from 'motion-presets'
 
 <Reveal preset={springBounce()}>
   <div>Physics-based animation</div>
@@ -229,7 +229,7 @@ import { springBounce, fadeInUp } from '@motion-presets/core'
 ### Global Configuration
 
 ```jsx
-import { setGlobalAnimationConfig } from '@motion-presets/core'
+import { setGlobalAnimationConfig } from 'motion-presets'
 
 // Set global defaults
 setGlobalAnimationConfig({
@@ -256,7 +256,7 @@ Motion Presets automatically respects the user's `prefers-reduced-motion` settin
 Full TypeScript support with intelligent autocomplete:
 
 ```tsx
-import { Reveal, PresetName } from '@motion-presets/core'
+import { Reveal, PresetName } from 'motion-presets'
 
 const preset: PresetName = 'fadeInUp'
 
@@ -282,7 +282,7 @@ function AnimatedCard({ children, animationType }: Props) {
 
 ```jsx
 // Only imports fadeIn preset - minimal bundle impact
-import { fadeIn } from '@motion-presets/core'
+import { fadeIn } from 'motion-presets'
 ```
 
 ## 🌐 Framework Compatibility
@@ -337,7 +337,7 @@ import { fadeIn } from '@motion-presets/core'
 Create beautiful animated modals with zero configuration:
 
 ```jsx
-import { Reveal } from '@motion-presets/core'
+import { Reveal } from 'motion-presets'
 
 function Modal({ isOpen, onClose, children }) {
   return (
@@ -366,7 +366,7 @@ function Modal({ isOpen, onClose, children }) {
 Smooth page transitions for Next.js:
 
 ```jsx
-import { PageTransition } from '@motion-presets/core'
+import { PageTransition } from 'motion-presets'
 
 // In your _app.js or layout
 function MyApp({ Component, pageProps, router }) {
@@ -387,7 +387,7 @@ function MyApp({ Component, pageProps, router }) {
 Interactive carousel with gesture support:
 
 ```jsx
-import { Stagger, MultiAnimation } from '@motion-presets/core'
+import { Stagger, MultiAnimation } from 'motion-presets'
 
 function ImageCarousel({ images }) {
   return (
@@ -442,7 +442,7 @@ import { motion } from 'framer-motion' // Causes hydration errors
 
 // ✅ Use Motion Presets for SSR compatibility
 'use client'
-import { Reveal } from '@motion-presets/core'
+import { Reveal } from 'motion-presets'
 
 export default function Page() {
   return (
@@ -461,7 +461,7 @@ export default function Page() {
 </AnimatePresence>
 
 // ✅ Working page transitions with Motion Presets
-import { PageTransition } from '@motion-presets/core'
+import { PageTransition } from 'motion-presets'
 
 function MyApp({ Component, pageProps, router }) {
   return (
@@ -490,7 +490,7 @@ npm install framer-motion
 ```jsx
 // Use 'use client' directive in Next.js components
 'use client'
-import { Reveal } from '@motion-presets/core'
+import { Reveal } from 'motion-presets'
 ```
 
 **Animations not working**
@@ -536,7 +536,7 @@ MIT License - see [LICENSE](LICENSE) file for details.
 ## 🔗 Links
 
 - [GitHub Repository](https://github.com/jyogesh17/motion-presets)
-- [NPM Package](https://www.npmjs.com/package/@motion-presets/core)
+- [NPM Package](https://www.npmjs.com/package/motion-presets)
 - [Issues & Bugs](https://github.com/jyogesh17/motion-presets/issues)
 
 ## ⭐ Show Your Support
