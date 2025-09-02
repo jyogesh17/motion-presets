@@ -1,0 +1,84 @@
+{
+  "name": "@motion-presets/core",
+  "version": "0.1.0",
+  "description": "🎭 Beautiful React animations made simple - One-line animation presets built on Framer Motion",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "sideEffects": false,
+  "license": "MIT",
+  "homepage": "https://motion-presets.dev",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/motion-presets.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/motion-presets/issues"
+  },
+  "author": {
+    "name": "Your Name",
+    "email": "your.email@example.com",
+    "url": "https://github.com/yourusername"
+  },
+  "funding": {
+    "type": "individual",
+    "url": "https://motion-presets.dev/pricing"
+  },
+  "keywords": [
+    "react",
+    "animation",
+    "framer-motion",
+    "motion",
+    "presets",
+    "components",
+    "ui",
+    "transitions",
+    "nextjs",
+    "typescript",
+    "ssr",
+    "entrance",
+    "effects",
+    "spring",
+    "physics"
+  ],
+  "scripts": {
+    "dev": "tsup --watch",
+    "build": "tsup",
+    "test": "jest",
+    "lint": "eslint . --ext .ts,.tsx",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf dist node_modules .turbo"
+  },
+  "peerDependencies": {
+    "framer-motion": ">=10.0.0 <12.0.0",
+    "react": ">=16.8.0 || >=17.0.0 || >=18.0.0",
+    "react-dom": ">=16.8.0 || >=17.0.0 || >=18.0.0"
+  },
+  "peerDependenciesMeta": {
+    "react-dom": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.48",
+    "@types/react-dom": "^18.2.18",
+    "framer-motion": "^11.0.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "tsup": "^8.0.1",
+    "typescript": "^5.3.3"
+  }
+}
