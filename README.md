@@ -370,14 +370,14 @@ MIT License - see [LICENSE](LICENSE) file for details.
 
 - [Documentation](https://motion-presets.dev)
 - [Interactive Playground](https://motion-presets.dev/playground)
-- [GitHub Repository](https://github.com/yourusername/motion-presets)
+- [GitHub Repository](https://github.com/jyogesh17/motion-presets)
 - [NPM Package](https://www.npmjs.com/package/@motion-presets/core)
-- [Issues & Bugs](https://github.com/yourusername/motion-presets/issues)
+- [Issues & Bugs](https://github.com/jyogesh17/motion-presets/issues)
 
 ## ⭐ Show Your Support
 
-If this project helped you, please consider giving it a ⭐ on [GitHub](https://github.com/yourusername/motion-presets)!
+If this project helped you, please consider giving it a ⭐ on [GitHub](https://github.com/jyogesh17/motion-presets)!
 
 ---
 
-Made with ❤️ by [Your Name](https://github.com/yourusername)
+Made with ❤️ by [Yogesh Jadhav](https://github.com/jyogesh17)

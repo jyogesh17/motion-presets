@@ -23,15 +23,15 @@
   "homepage": "https://motion-presets.dev",
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourusername/motion-presets.git"
+    "url": "https://github.com/jyogesh17/motion-presets.git"
   },
   "bugs": {
-    "url": "https://github.com/yourusername/motion-presets/issues"
+    "url": "https://github.com/jyogesh17/motion-presets/issues"
   },
   "author": {
-    "name": "Your Name",
-    "email": "your.email@example.com",
-    "url": "https://github.com/yourusername"
+    "name": "Yogesh Jadhav",
+    "email": "yogesh@example.com",
+    "url": "https://github.com/jyogesh17"
   },
   "funding": {
     "type": "individual",
